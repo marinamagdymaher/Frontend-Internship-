@@ -16,10 +16,20 @@ let endX = 0;
 
 function updateImg(index) {
   // carousal.src = allImg[index % allImg.length];
-
   currentIndex = index % allImg.length;
-  carousal.src = allImg[currentIndex];
-// Slide effect
+  // carousal.src = allImg[currentIndex];
+
+  // Apply the flip effect
+  carousal.style.transition = "transform 0.6s"; // Smooth transition
+  carousal.style.transform = `rotateY(180deg)`; // Trigger the flip
+    // Change the image after the flip
+    setTimeout(() => {
+      carousal.src = allImg[currentIndex];
+      carousal.style.transition = "none"; // Remove transition to avoid flicker
+      carousal.style.transform = `rotateY(0deg)`; // Reset the rotation for the next image
+  }, 1500); // Match this timeout with the transition duration
+
+  // Slide effect
   createPaginationDots();
 }
 

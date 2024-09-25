@@ -19,18 +19,8 @@ function updateImg(index) {
 
   currentIndex = index % allImg.length;
   carousal.src = allImg[currentIndex];
-  carousal.style.transform = `translateX(-${currentIndex * 10}%)`; // Slide effect
+// Slide effect
   createPaginationDots();
-
-  const images = carousal.querySelectorAll("img");
-
-  images.forEach((img, i) => {
-    img.classList.remove("active"); // Remove active class from all images
-    if (i === currentIndex) {
-      img.classList.add("active"); // Add active class to current image
-    }
-  });
-
 }
 
 // Function to create pagination dots dynamically

@@ -1,0 +1,156 @@
+:root {
+  --primary-color: #0056b3; /* Darker blue for better contrast */
+  --secondary-color: #007bff; /* Lighter blue for hover and accents */
+  --hover-color: #004085; /* Even darker for hover states */
+  --white-color: white;
+  --light-gray-color: #f8f9fa; /* Background for cards and sidebar */
+  --gray-color: #e9ecef; /* Lighter gray for subtle background */
+  --dark-color: #343a40; /* Footer background */
+  --text-color: #212529; /* Darker text color for better readability */
+  --muted-text-color: #6c757d; /* Muted gray for less important text */
+  --border-color: #ced4da; /* Lighter border for a softer look */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Consistent shadow */
+  --hover-shadow-color: rgba(0, 0, 0, 0.2); /* Stronger hover shadow */
+  --padding: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: var(--light-gray-color);
+  color: var(--text-color);
+}
+
+/* Smooth scroll for Back to Top */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Start nav section */
+
+nav {
+  background-color: var(--primary-color); /* Darker for contrast */
+  color: var(--white-color);
+  padding: 40px 0;
+  text-align: center;
+  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+h5 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--primary-color); /* Emphasize post titles with primary color */
+}
+
+p {
+  line-height: 1.6;
+}
+
+.card {
+  transition: all .5s ease-in;
+}
+
+/* Card Hover Effect */
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 15px var(--hover-shadow-color);
+}
+
+/* Submit Button Loading Spinner */
+.btn-submit-loading {
+  position: relative;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--hover-color); /* Stronger color on hover */
+  border-color: var(--accent-color);
+  color: black;
+}
+
+/* End article section */
+
+/* Start aside section */
+
+aside {
+  background-color: var(--white-color);
+  padding: var(--padding);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  margin-bottom: 20px;
+}
+
+aside h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: var(--primary-color); /* Title color matches the primary scheme */
+}
+
+aside ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+aside ul li {
+  margin-bottom: 10px;
+}
+
+aside ul li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+aside ul li a:hover {
+  color: var(--hover-color); /* Darker hover for better contrast */
+  text-decoration: underline;
+}
+/* End aside section */
+
+.back-to-top {
+  position: fixed;
+  bottom: 50%;
+  right: 10px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  z-index: 100;
+}
+
+.back-to-top:hover {
+  background-color: var(--hover-color); /* Change on hover */
+}
+/* Start footer section */
+
+footer {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+  color: var(--muted-text-color);
+}
+/* End footer section */

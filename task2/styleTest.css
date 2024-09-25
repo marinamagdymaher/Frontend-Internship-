@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.slider-container {
+  position: relative;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+}
+
+.slides {
+  width: 100%;
+  height: 100vh;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  transform-style: preserve-3d; 
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+
+.slides img {
+  width: 100%; /* Control the width */
+  margin: 0; /* No margin between images */
+  opacity: 0.7; /* Slight transparency */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Transition for smooth effects */
+}
+
+.slides img.active {
+  opacity: 1; /* Full opacity for active image */
+}
+
+button {
+  background-color: transparent;
+  font-size: 30px;
+  position: absolute;
+  border: none; /* Removes the border */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.prev {
+  left: 3rem;
+}
+
+.next {
+  right: 2rem;
+}
+
+/* The dots/bullets/indicators */
+.pagination-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.pagination-dots .dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination-dots .dot.active {
+  background-color: #717171;
+}
+
+.slides img.active {
+  opacity: 1; /* Full opacity for active image */
+}
+
+/* Media Screen */
+@media (min-width: 640px) {
+}
+
+@media (min-width: 768px) {
+  .prev {
+    left: 5rem;
+  }
+  .next{
+    right: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .prev {
+    left: 9rem;
+  }
+
+  .next {
+    left: 55rem;
+  
+  }
+}
+
+@media (min-width: 1280px) {
+  .prev {
+    left: 15rem;
+  }
+
+  .next {
+    left: 70rem;
+  }
+}
+
+@media (min-width: 1536px) {
+}
